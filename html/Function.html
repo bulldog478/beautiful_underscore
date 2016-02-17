@@ -1,0 +1,16 @@
+<!-- Function.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Function</title>
+	<script src="../node_modules/underscore/underscore.js"></script>
+</head>
+<body>
+	<script>
+		var func = function(greeting){return greeting +': '+ this.name};
+		func = _.bind(func,{name:'Zan'},'hi');
+		console.log(func());
+	</script>
+</body>
+</html>
